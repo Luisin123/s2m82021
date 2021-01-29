@@ -1,0 +1,61 @@
+@media screen and (min-width: 769px){
+	body{
+		background-color: lightblue;
+	}
+	#main li {
+		width: 25%;
+		float: left;
+	}
+	#aside li {
+		width: 100%;
+	}
+	#header {
+		width: 100%;/* todos los elementos que trabajan en bloque por defecto ocupan el 100% cuando esta en posicionamiento estatico*/
+/*		height: 100px;*/
+		background-color: pink;
+	}
+	#menu {
+		overflow: hidden;
+		text-align: center;
+		width: 80%;
+		margin: 0 auto;
+		/*height: 400px;*/ 
+		position: relative;
+	}
+	#menu > li {
+		width: 16.666%;
+		float: left;
+	}
+	#menu li .sub{
+		display: none;/*(elemento padre)hace que no se vea los elementos */
+		/*position: absolute;
+		top: 50px;
+		left: 0;*/
+		width: 300%;
+		overflow: hidden;
+	}
+	#menu li .sub li{ /*(elemento hijo, la lista dentro del elemento padre)*/
+	/*	width: 25%;*/
+	/*	float:none; */
+	/*	float: left; /* para que se ponga en linea los li y no en bloque */
+	}
+	#menu li:hover > .sub{/*hace que pase de display none a display block y que se vea el submenu*/
+		display: block;
+	}
+	#main {
+		margin-top: 100px;
+		width: 70%;
+		float: left;
+		overflow: hidden;
+	}
+	#aside {
+		margin-top: 100px;
+		width: 30%;
+		float: left;
+		overflow: hidden;
+	}
+	#footer {
+		height: 100px;
+		clear: both;/* para que no se suva cuando flotas algo*/
+	}
+}
